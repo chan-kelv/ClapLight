@@ -170,7 +170,7 @@ def ensure_milestones(repo):
 
 def parse_ticket(path):
     import yaml
-    text = path.read_text()
+    text = path.read_text(encoding="utf-8")
     m = re.match(r"^---\s*\n(.*?)\n---\s*\n(.*)$", text, re.DOTALL)
     if not m:
         raise ValueError(f"No frontmatter in {path}")
