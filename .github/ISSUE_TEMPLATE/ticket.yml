@@ -1,0 +1,38 @@
+name: Ticket
+description: A scoped piece of work for ClapLight
+title: "[ID] "
+labels: ["status/todo"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Use this template for new tickets. Pick an epic, priority, and estimate label
+        after creating. Reference related tickets and external docs in the body.
+  - type: textarea
+    id: description
+    attributes:
+      label: Description
+      description: One or two sentences on what this ticket accomplishes.
+    validations:
+      required: true
+  - type: textarea
+    id: acceptance
+    attributes:
+      label: Acceptance criteria
+      description: Checklist of concrete deliverables.
+      value: |
+        - [ ]
+        - [ ]
+        - [ ]
+    validations:
+      required: true
+  - type: textarea
+    id: notes
+    attributes:
+      label: Technical notes
+      description: Implementation details, gotchas, decisions.
+  - type: textarea
+    id: references
+    attributes:
+      label: References
+      description: Related tickets (#N) and external doc links.

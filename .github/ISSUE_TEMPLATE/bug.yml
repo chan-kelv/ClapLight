@@ -1,0 +1,28 @@
+name: Bug
+description: Something works incorrectly
+title: "[BUG] "
+labels: ["status/todo", "priority/high"]
+body:
+  - type: textarea
+    id: what-happened
+    attributes:
+      label: What happened
+      description: Steps to reproduce, actual vs expected behavior.
+    validations:
+      required: true
+  - type: input
+    id: device
+    attributes:
+      label: Android device + version
+      placeholder: e.g. Galaxy Z Fold 7, Android 16
+  - type: input
+    id: nanoleaf-device
+    attributes:
+      label: Nanoleaf device(s) involved
+      placeholder: e.g. Shapes + 4D
+  - type: textarea
+    id: logs
+    attributes:
+      label: Logs
+      description: Relevant logcat output, with tokens redacted.
+      render: shell
